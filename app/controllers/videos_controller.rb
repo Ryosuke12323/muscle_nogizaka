@@ -5,6 +5,7 @@ class VideosController < ApplicationController
   # GET /videos.json
   def index
     @videos = Video.all
+    @muscle = Muscle.new
   end
 
   # GET /videos/1

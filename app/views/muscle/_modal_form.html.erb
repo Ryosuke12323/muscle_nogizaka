@@ -1,0 +1,35 @@
+ <!-- Modal Trigger -->
+<button type="button" class="waves-effect waves-light btn modal-trigger" data-toggle="modal" data-target="<%= video.muscle_id %>">
+  動画を視聴する
+</button>
+
+<!-- Modal Structure -->
+<div id="<%= video.muscle_id %>" class="modal">
+  <div class="modal-content center">
+    <h4 class="red-text">Warning</h4>
+    <p>こちらの乃木坂動画を見るためには下記の動画を最後まで視聴し、</p>
+    <p>要約を *200文字以上* でまとめ、下記のメールアドレスまで送ってください！</p>
+    <p>◼︎ 水田涼介</p>
+    <p>Mail: basketball@gmail.com</p>
+    <strong><h3>Let's Muscle!!!</h3></strong>
+    <span>
+      <% iframe = content_tag(
+          :iframe,
+          '', # empty body
+          width: '100%',
+          height: 300,
+          src: "https://www.youtube.com/embed/TMecNtwv7bU",
+          frameborder: 0,
+          allowfullscreen: true
+      ) %>
+      <%= content_tag(:div, iframe, class: 'youtube-container') %>
+    </span>
+    <div class="modal-footer">
+      <% if !video.sent_mail %>
+        <%= link_to "まだ要約を水田さんに送っていません！", root_path(video), class: 'modal-close waves-effect waves-green btn red'%>
+      <% else %>
+        <%= link_to "要約を送ったので動画へ進む", video_path(video), class: 'modal-close waves-effect waves-green btn green'%>
+      <% end %>
+    </div>
+  </div>
+</div>
