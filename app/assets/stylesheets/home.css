@@ -1,0 +1,54 @@
+.ue-sukima{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+.promo-example {
+    overflow: hidden;
+}
+.promo {
+    width: 100%;
+}
+.center ,.center-align {
+    text-align: center;
+}
+.promo-caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.light {
+    font-weight: 300;
+}
+.promo i {
+  margin: 40px 0;
+  color: #aa00ff;
+  font-size: 7rem;
+  display: block;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.top-cover{
+  background-size: cover;
+  background: black;
+  height: 100%;
+  width: 100%;
+  filter:brightness(40%);
+}
