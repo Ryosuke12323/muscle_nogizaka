@@ -19,6 +19,7 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit
+    # あとで実装
   end
 
   # POST /videos
