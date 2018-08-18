@@ -1,6 +1,6 @@
 .ue-sukima{
-  margin-top: 300px;
-  margin-bottom: 300px;
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
 .center {
     text-align: center;
@@ -50,5 +50,4 @@
   background: black;
   height: 100%;
   width: 100%;
-  filter:brightness(40%);
 }
