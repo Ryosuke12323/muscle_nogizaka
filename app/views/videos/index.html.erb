@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
-
+<h2>新規投稿</h2>
 <%= link_to new_video_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
   <i class="material-icons">add</i>
 <% end %>
 
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -19,18 +18,37 @@
     <% @videos.each do |video| %>
       <tr>
         <td><%= link_to video.title, video %></td>
-
-        <td>
           <%= link_to edit_video_path(video) do %>
             <i class="material-icons">edit</i>
           <% end %>
           <%= link_to video, method: :delete, data: { confirm: 'Are you sure?' } do %>
             <i class="material-icons">delete</i>
           <% end %>
+        <td>
+
         </td>
 
       </tr>
     <% end %>
   </tbody>
-</table>
-
+</table> -->
+<div class="row">
+  <div class="col s12 m7">
+    <% @videos.each do |video| %>
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag "#{video.image}", size: '150×150' %>
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p><%= video.description %></p>
+        </div>
+        <div class="card-action">
+            <%= link_to "動画を視聴する", video, class: "btn" %>
+            <%= link_to "編集", edit_video_path(video), class: "btn" %>
+            <%= link_to "削除", video, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
