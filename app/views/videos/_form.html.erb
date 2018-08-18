@@ -12,26 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :video %>
-    <%= form.text_field :video, id: :video_video %>
+    <%= form.text_field :video, id: :video_video, placeholder: "Video" %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :video_title %>
+    <%= form.text_field :title, id: :video_title, placeholder: "Title" %>
   </div>
 
   <div class="field">
-    <%= form.label :star %>
-    <%= form.text_field :star, id: :video_star %>
+    <%= form.text_field :star, id: :video_star, placeholder: "Star" %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :video_description %>
+    <%= form.text_area :description, id: :video_description, placeholder: "Description", length: "800", class: "materialize-textarea" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <button class="btn" type="submit">Submit</button>
+  <%= link_to "ビデオ一覧に戻る", videos_path, class: 'btn' %>
 <% end %>
