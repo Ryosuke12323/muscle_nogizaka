@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 20180818005119) do
 
   create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "image"
     t.string "video"
     t.string "title"
     t.string "star"
