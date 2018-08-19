@@ -4868,6 +4868,7 @@ small {
   top: 0;
   bottom: 0;
   width: 100%;
+  object-fit: contain;
 }
 
 .card .card-image .card-title {
